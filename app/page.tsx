@@ -32,7 +32,7 @@ export default function Home() {
       <section className="border-b border-zinc-200 dark:border-zinc-800">
         <div className="mx-auto max-w-5xl px-6 py-20 sm:py-28">
           <span className="inline-flex items-center rounded-full bg-emerald-100 dark:bg-emerald-900/40 px-3 py-1 text-xs font-medium text-emerald-800 dark:text-emerald-200">
-            800+ aptek · aktualizacja codzienna
+            670+ aptek · aktualizacja codzienna
           </span>
           <h1 className="mt-6 text-4xl sm:text-6xl font-semibold tracking-tight leading-tight">
             Najtańsza apteka
@@ -78,10 +78,10 @@ export default function Home() {
         <div className="mx-auto max-w-5xl px-6 py-14">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
             {[
-              { value: "800+", label: "aptek w bazie" },
-              { value: "60+", label: "odmian suszu" },
-              { value: "24h", label: "częstotliwość scrap" },
-              { value: "0 zł", label: "miesięcznie" },
+              { value: "670+", label: "aptek skanowanych co dzień" },
+              { value: "160+", label: "odmian śledzonych" },
+              { value: "24h", label: "cykl aktualizacji" },
+              { value: "0 zł", label: "dla pacjenta" },
             ].map((s) => (
               <div key={s.label}>
                 <div className="text-3xl sm:text-4xl font-semibold tracking-tight">
@@ -110,7 +110,7 @@ export default function Home() {
               {
                 step: "1",
                 title: "Scraping aptek",
-                body: "Skrypt codziennie pobiera dostępność i ceny z ~800 polskich aptek prowadzących medyczną marihuanę.",
+                body: "Skrypt codziennie pobiera dostępność i ceny z ponad 670 polskich aptek prowadzących medyczną marihuanę.",
               },
               {
                 step: "2",

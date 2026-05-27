@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: "%s | HighScanner",
   },
   description:
-    "Skaner cen medycznej marihuany w 800+ polskich aptekach. Aktualizacja codzienna. Telegram bot + Discord. Bez reklam, bez afiliacji — robione przez pacjenta dla pacjentów.",
+    "Skaner cen medycznej marihuany w ponad 670 polskich aptekach skanowanych codziennie. Telegram bot + Discord. Bez reklam, bez afiliacji — robione przez pacjenta dla pacjentów.",
   keywords: [
     "medyczna marihuana",
     "ceny aptek",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "HighScanner — najtańsze apteki z medyczną marihuaną",
     description:
-      "800+ aptek, codzienny scraping, alerty na Telegramie i Discordzie. Bez reklam.",
+      "Ponad 670 aptek, codzienny scraping, alerty na Telegramie i Discordzie. Bez reklam.",
     url: "https://highscanner.pl",
     siteName: "HighScanner",
     locale: "pl_PL",
