@@ -29,5 +29,5 @@ npm run start
 ## Related
 
 - Telegram bot: [@weed_offers_bot](https://t.me/weed_offers_bot)
-- Discord: discord.gg/highscanner
+- Discord: discord.gg/qBDz9z2VDX
 - Main project: `/home/trebusz/weed-bot` (scrapers + bot backend, private)

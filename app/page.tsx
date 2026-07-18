@@ -48,7 +48,7 @@ export default function Home() {
               <span aria-hidden>→</span>
             </a>
             <a
-              href="https://discord.gg/highscanner"
+              href="https://discord.gg/qBDz9z2VDX"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-lg border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-900 active:bg-zinc-200 dark:active:bg-zinc-800 px-6 py-3.5 sm:py-3 text-base font-medium transition-colors"
@@ -195,7 +195,7 @@ export default function Home() {
                 Telegram bot
               </a>
               <a
-                href="https://discord.gg/highscanner"
+                href="https://discord.gg/qBDz9z2VDX"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline"
@@ -247,7 +247,7 @@ export default function Home() {
             <span aria-hidden>→</span>
           </a>
           <a
-            href="https://discord.gg/highscanner"
+            href="https://discord.gg/qBDz9z2VDX"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-lg border border-zinc-300 dark:border-zinc-700 active:bg-zinc-200 dark:active:bg-zinc-800 px-4 py-3 text-sm font-medium"
