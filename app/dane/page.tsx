@@ -54,6 +54,13 @@ export default function DanePage() {
               Wkład społeczności: zdjęcia paragonów / cenników przesyłane
               dobrowolnie przez pacjentów, rozpoznawane przez OCR.
             </li>
+            <li>
+              Anonimowe statystyki użycia: losowy identyfikator instalacji
+              apki oraz skrót (hash) identyfikatora konta w botach — tylko
+              do policzenia, ilu jest użytkowników i ile razy wyświetlono
+              oraz kliknięto oznaczone reklamy. Bez imion, numerów
+              telefonów i historii zakupów.
+            </li>
           </ul>
         </section>
 
@@ -64,9 +71,9 @@ export default function DanePage() {
           <ul className="mt-4 space-y-2 text-zinc-700 dark:text-zinc-300 leading-relaxed list-disc list-outside pl-6">
             <li>
               <strong>Paragony użytkowników</strong> — pacjenci wrzucają
-              zdjęcia paragonów / cenników do bota na Telegramie lub
-              Discordzie. System OCR rozpoznaje cenę, nazwę odmiany,
-              aptekę i datę. Za wkład w bazę użytkownik otrzymuje punkty.
+              zdjęcia paragonów / cenników w apce na Androida albo do bota
+              na Telegramie lub Discordzie. System OCR rozpoznaje cenę,
+              nazwę odmiany, aptekę i datę.
             </li>
             <li>
               <strong>Publicznie udostępniane informacje aptek</strong> —

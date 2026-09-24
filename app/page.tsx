@@ -10,8 +10,14 @@ export default function Home() {
             HighScanner<span className="text-emerald-600">.pl</span>
           </Link>
           <nav className="flex gap-4 sm:gap-6 text-xs sm:text-sm">
+            <Link href="/aplikacja" className="hover:underline">
+              Aplikacja
+            </Link>
             <a href="#jak-to-dziala" className="hover:underline">
               Jak to działa
+            </a>
+            <a href="#wsparcie" className="hover:underline">
+              Wesprzyj
             </a>
             <a href="#kontakt" className="hover:underline">
               Kontakt
@@ -34,18 +40,24 @@ export default function Home() {
           <p className="mt-5 max-w-2xl text-base sm:text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
             Realne ceny z paragonów wrzucanych przez pacjentów i z
             publicznie dostępnych źródeł. Wpisz odmianę i miasto — dostań
-            listę aptek gdzie jest taniej. Alerty cenowe na Telegramie,
-            społeczność na Discordzie.
+            listę aptek gdzie jest taniej. Apka na Androida, bot na
+            Telegramie, społeczność na Discordzie.
           </p>
           <div className="mt-7 sm:mt-10 flex flex-col sm:flex-row gap-2 sm:gap-3">
+            <Link
+              href="/aplikacja"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-lg bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 text-white px-6 py-3.5 sm:py-3 text-base font-medium transition-colors shadow-sm shadow-emerald-600/20"
+            >
+              Pobierz apkę na Androida
+              <span aria-hidden>→</span>
+            </Link>
             <a
               href="https://t.me/weed_offers_bot"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-lg bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 text-white px-6 py-3.5 sm:py-3 text-base font-medium transition-colors shadow-sm shadow-emerald-600/20"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-lg border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-900 active:bg-zinc-200 dark:active:bg-zinc-800 px-6 py-3.5 sm:py-3 text-base font-medium transition-colors"
             >
-              Otwórz @weed_offers_bot
-              <span aria-hidden>→</span>
+              Bot na Telegramie
             </a>
             <a
               href="https://discord.gg/qBDz9z2VDX"
@@ -57,8 +69,8 @@ export default function Home() {
             </a>
           </div>
           <p className="mt-5 sm:mt-6 text-xs text-zinc-500 dark:text-zinc-500">
-            Zero reklam aptek, zero afiliacji, zero zbierania danych
-            pacjentów. Robione po pracy, dla siebie i dla innych.
+            Zero reklam aptek i leków, zero afiliacji, bez zbierania danych
+            osobowych pacjentów. Robione po pracy, dla siebie i dla innych.
           </p>
         </div>
       </section>
@@ -68,9 +80,9 @@ export default function Home() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6 py-8 sm:py-14">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8">
             {[
-              { value: "670+", label: "aptek w bazie" },
-              { value: "160+", label: "odmian" },
-              { value: "live", label: "aktualizacja" },
+              { value: "640+", label: "aptek z cenami (30 dni)" },
+              { value: "150+", label: "miast" },
+              { value: "45+", label: "odmian dostępnych teraz" },
               { value: "0 zł", label: "dla pacjenta" },
             ].map((s) => (
               <div key={s.label}>
@@ -100,17 +112,17 @@ export default function Home() {
               {
                 step: "1",
                 title: "Wrzucasz paragon",
-                body: "Bot na Telegramie lub Discordzie przyjmuje zdjęcie paragonu / cennika. OCR rozpoznaje aptekę, odmianę i cenę, dane lądują w naszej wspólnej bazie. Za każdy paragon — punkty.",
+                body: "W apce na Androida albo w bocie na Telegramie robisz zdjęcie paragonu. OCR odczytuje kwotę i produkt, a spójny paragon od razu trafia do cen widocznych dla innych pacjentów.",
               },
               {
                 step: "2",
                 title: "Sprawdzasz najtaniej",
-                body: "Wpisujesz odmianę i miasto — bot wylicza apteki z najniższymi cenami na podstawie ostatnich obserwacji z naszej bazy oraz publicznie dostępnych źródeł.",
+                body: "Wpisujesz odmianę i miasto — apka albo bot pokazuje apteki z najniższymi cenami na podstawie ostatnich obserwacji z naszej bazy oraz publicznie dostępnych źródeł.",
               },
               {
                 step: "3",
                 title: "Społeczność rośnie",
-                body: "Im więcej pacjentów wrzuca paragony, tym pełniejszy obraz rynku. Bez reklam, bez afiliacji, bez sprzedaży danych użytkowników.",
+                body: "Im więcej pacjentów wrzuca paragony, tym pełniejszy obraz rynku. Reklamy tylko oznaczone i nigdy od aptek ani producentów leków. Bez afiliacji, bez sprzedaży danych użytkowników.",
               },
             ].map((c) => (
               <div
@@ -145,8 +157,8 @@ export default function Home() {
               dlatego, że nie wie, że gdzieś jest taniej.
             </p>
             <p>
-              HighScanner to mój projekt po pracy — bot na Telegramie i
-              mała społeczność na Discordzie. Nie biorę pieniędzy od
+              HighScanner to mój projekt po pracy — apka na Androida, bot
+              na Telegramie i społeczność na Discordzie. Nie biorę pieniędzy od
               aptek, nie mam linków afiliacyjnych, nie sprzedaję danych
               użytkowników. Jak masz uwagi, pomysły, błędy w danych —
               napisz.
@@ -162,6 +174,45 @@ export default function Home() {
                 /dane
               </Link>
               .
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Donations */}
+      <section
+        id="wsparcie"
+        className="border-b border-zinc-200 dark:border-zinc-800 scroll-mt-16"
+      >
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 py-12 sm:py-20">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">
+            Wesprzyj HighScanner
+          </h2>
+          <div className="mt-6 space-y-4 text-zinc-700 dark:text-zinc-300 leading-relaxed">
+            <p>
+              Apka i bot są darmowe i takie zostaną — bez zakładania konta
+              i bez handlu danymi. Serwer chodzi całą dobę, żeby ceny były
+              aktualne, a ktoś za ten prąd płaci. Jeśli HighScanner
+              zaoszczędził Ci parę złotych w aptece, możesz dorzucić
+              cegiełkę.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
+              <a
+                href="https://revolut.me/dawajsos"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-lg bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 text-white px-6 py-3 text-base font-medium transition-colors"
+              >
+                Wesprzyj przez Revolut
+              </a>
+              <div className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg border border-zinc-300 dark:border-zinc-700 px-6 py-3 text-base">
+                BLIK na telefon:&nbsp;<span className="font-semibold">787 935 875</span>
+              </div>
+            </div>
+            <p className="text-sm text-zinc-600 dark:text-zinc-400">
+              Wpisz nazwę miasta w tytule przelewu — założę dla niego kanał
+              z cenami na Discordzie. Nie masz jak wesprzeć? Wrzuć paragon
+              w apce — to pomaga najbardziej.
             </p>
           </div>
         </div>
@@ -186,6 +237,9 @@ export default function Home() {
               >
                 kontakt@highscanner.pl
               </a>
+              <Link href="/aplikacja" className="hover:underline">
+                Aplikacja
+              </Link>
               <a
                 href="https://t.me/weed_offers_bot"
                 target="_blank"
@@ -211,7 +265,7 @@ export default function Home() {
             <p>
               HighScanner nie sprzedaje leków, nie pośredniczy w sprzedaży
               i nie udziela porad medycznych. Dane o cenach pochodzą od
-              użytkowników (paragony przesyłane dobrowolnie do bota,
+              użytkowników (paragony przesyłane dobrowolnie w apce lub do bota,
               rozpoznawane przez OCR) oraz z publicznie udostępnianych
               źródeł. Nie pobieramy zawartości żadnej konkretnej bazy
               dostawcy w sposób systematyczny — agregujemy punktowe
@@ -225,7 +279,7 @@ export default function Home() {
               dotyczące terapii zawsze konsultuj z lekarzem.
             </p>
             <p className="mt-3">
-              © {new Date().getFullYear()} HighScanner. Projekt niekomercyjny.
+              © {new Date().getFullYear()} HighScanner. Projekt społeczny rozwijany po godzinach.
             </p>
           </div>
         </div>
@@ -237,14 +291,21 @@ export default function Home() {
         className="fixed inset-x-0 bottom-0 z-40 sm:hidden border-t border-zinc-200 dark:border-zinc-800 bg-white/95 dark:bg-zinc-950/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 supports-[backdrop-filter]:dark:bg-zinc-950/80"
       >
         <div className="mx-auto max-w-5xl px-3 py-2.5 flex gap-2">
+          <Link
+            href="/aplikacja"
+            className="flex-1 inline-flex items-center justify-center gap-1.5 rounded-lg bg-emerald-600 active:bg-emerald-800 text-white px-3 py-3 text-sm font-medium shadow-sm shadow-emerald-600/20"
+          >
+            Pobierz apkę
+            <span aria-hidden>→</span>
+          </Link>
           <a
             href="https://t.me/weed_offers_bot"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 inline-flex items-center justify-center gap-1.5 rounded-lg bg-emerald-600 active:bg-emerald-800 text-white px-3 py-3 text-sm font-medium shadow-sm shadow-emerald-600/20"
+            className="inline-flex items-center justify-center rounded-lg border border-zinc-300 dark:border-zinc-700 active:bg-zinc-200 dark:active:bg-zinc-800 px-4 py-3 text-sm font-medium"
+            aria-label="Otwórz bota na Telegramie"
           >
-            Otwórz bota
-            <span aria-hidden>→</span>
+            Bot
           </a>
           <a
             href="https://discord.gg/qBDz9z2VDX"
