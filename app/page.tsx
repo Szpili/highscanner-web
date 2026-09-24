@@ -206,7 +206,7 @@ export default function Home() {
                 Wesprzyj przez Revolut
               </a>
               <div className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg border border-zinc-300 dark:border-zinc-700 px-6 py-3 text-base">
-                BLIK na telefon:&nbsp;<span className="font-semibold">787 935 875</span>
+                BLIK na telefon:&nbsp;<span className="font-semibold">606 493 220</span>
               </div>
             </div>
             <p className="text-sm text-zinc-600 dark:text-zinc-400">
