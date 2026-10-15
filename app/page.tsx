@@ -1,6 +1,32 @@
 import Link from "next/link";
 
-export default function Home() {
+// Liczby z żywej bazy (api.highscanner.pl/api/prices/summary), odświeżane co 5 min (ISR).
+// Fallback = ostatnie znane wartości, gdy backend nie odpowiada — nigdy pusty kafelek.
+export const revalidate = 300;
+
+type Summary = { apteki_30d: number; miasta: number; odmiany: number; najnizsza_zl_g: number | null; aktualizacja_utc: string | null };
+const FALLBACK: Summary = { apteki_30d: 888, miasta: 239, odmiany: 46, najnizsza_zl_g: 14.87, aktualizacja_utc: null };
+
+async function getSummary(): Promise<Summary> {
+  try {
+    const r = await fetch("https://api.highscanner.pl/api/prices/summary", { next: { revalidate: 300 }, signal: AbortSignal.timeout(5000) });
+    if (!r.ok) return FALLBACK;
+    return { ...FALLBACK, ...(await r.json()) };
+  } catch {
+    return FALLBACK;
+  }
+}
+
+const pl = (n: number) => n.toLocaleString("pl-PL");
+const zl = (n: number) => n.toLocaleString("pl-PL", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+function updated(iso: string | null) {
+  if (!iso) return null;
+  return new Date(iso).toLocaleString("pl-PL", { timeZone: "Europe/Warsaw", day: "numeric", month: "long", hour: "2-digit", minute: "2-digit" });
+}
+
+export default async function Home() {
+  const s = await getSummary();
+  const upd = updated(s.aktualizacja_utc);
   return (
     <div className="flex flex-col flex-1 pb-20 sm:pb-0">
       {/* Top nav */}
@@ -80,21 +106,26 @@ export default function Home() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6 py-8 sm:py-14">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8">
             {[
-              { value: "640+", label: "aptek z cenami (30 dni)" },
-              { value: "150+", label: "miast" },
-              { value: "45+", label: "odmian dostępnych teraz" },
-              { value: "0 zł", label: "dla pacjenta" },
-            ].map((s) => (
-              <div key={s.label}>
+              { value: pl(s.apteki_30d), label: "aptek z cenami (30 dni)" },
+              { value: pl(s.miasta), label: "miast" },
+              { value: pl(s.odmiany), label: "odmian dostępnych teraz" },
+              { value: s.najnizsza_zl_g ? `${zl(s.najnizsza_zl_g)} zł` : "—", label: "najniższa cena za gram w Polsce" },
+            ].map((t) => (
+              <div key={t.label}>
                 <div className="text-2xl sm:text-4xl font-semibold tracking-tight">
-                  {s.value}
+                  {t.value}
                 </div>
                 <div className="mt-1 text-xs sm:text-sm text-zinc-600 dark:text-zinc-400">
-                  {s.label}
+                  {t.label}
                 </div>
               </div>
             ))}
           </div>
+          {upd && (
+            <p className="mt-6 text-xs text-zinc-500 dark:text-zinc-500">
+              Dane na żywo · ostatnia aktualizacja cen: {upd}
+            </p>
+          )}
         </div>
       </section>
 
