@@ -222,7 +222,8 @@ export default async function Home() {
           <div className="mt-6 space-y-4 text-zinc-700 dark:text-zinc-300 leading-relaxed">
             <p>
               Apka i bot są darmowe i takie zostaną — bez zakładania konta
-              i bez handlu danymi. Serwer chodzi całą dobę, żeby ceny były
+              i bez handlu danymi. Jeśli pojawią się reklamy, to tylko wyraźnie
+              oznaczone i nigdy od aptek ani producentów leków. Serwer chodzi całą dobę, żeby ceny były
               aktualne, a ktoś za ten prąd płaci. Jeśli HighScanner
               zaoszczędził Ci parę złotych w aptece, możesz dorzucić
               cegiełkę.

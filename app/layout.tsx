@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: "%s | HighScanner",
   },
   description:
-    "Realne ceny medycznej marihuany od pacjentów — paragony rozpoznawane przez OCR i publicznie dostępne źródła. Bot Telegram + Discord. Bez reklam, bez afiliacji — robione przez pacjenta dla pacjentów.",
+    "Realne ceny medycznej marihuany od pacjentów — paragony rozpoznawane przez OCR i publicznie dostępne źródła. Bot Telegram + Discord. Darmowe, bez afiliacji, reklamy tylko oznaczone i nigdy od aptek ani producentów leków — robione przez pacjenta dla pacjentów.",
   keywords: [
     "medyczna marihuana",
     "ceny aptek",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "HighScanner — najtańsze apteki z medyczną marihuaną",
     description:
-      "Ceny medycznej marihuany z paragonów wrzucanych przez pacjentów i z publicznych źródeł. Alerty na Telegramie i Discordzie. Bez reklam.",
+      "Ceny medycznej marihuany z paragonów wrzucanych przez pacjentów i z publicznych źródeł. Alerty na Telegramie i Discordzie. Darmowe, bez afiliacji.",
     url: "https://highscanner.pl",
     siteName: "HighScanner",
     locale: "pl_PL",
